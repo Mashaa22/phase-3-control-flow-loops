@@ -1,6 +1,13 @@
-def happy_new_year
-  # your code here
+
+def happy_new_year 
+  counter = 10
+  while counter > 0
+  puts counter
+    counter -= 1
+  end
+  puts "Happy New Year!"
 end
+
 
 # No need to modify this code! Use this to implement the fizzbuzz_printer method.
 def fizzbuzz(num)
@@ -15,10 +22,28 @@ def fizzbuzz(num)
   end
 end
 
-def fizzbuzz_printer
-  # your code here
+
+def fizzbuzz_printer 
+
+#    i = 1
+#   while i <= 100
+#     puts fizzbuzz(i)
+#     i += 1
+#   end
+num = 1
+  (1..100).each do |num|
+    puts fizzbuzz(num)
+
+  end
 end
 
-def reverse_string(str)
+
+
+def reverse_string(string)
   # your code here
+  split_string = string.split("")
+  reversed = []
+  string.size.times { reversed << split_string.pop }
+  reversed.join
 end
+puts reverse_string("hello")
